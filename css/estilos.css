@@ -14,6 +14,11 @@
 *::selection {
   background-color: white;
 }
+* a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
 
 header {
   background-size: 100vh;
@@ -31,6 +36,22 @@ main {
   background-color: rgb(186, 168, 136);
   background-size: 100vh;
   padding: 2rem;
+}
+main .recomendado {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: left;
+  padding: 1rem;
+}
+main .fila1, main .fila2, main .fila3, main .fila4, main .fila5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and (max-width: 900px) {
+  main .fila1, main .fila2, main .fila3, main .fila4, main .fila5 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 main .zapatilla1, main .zapatilla2, main .zapatilla3, main .zapatilla4, main .zapatilla5, main .zapatilla6, main .zapatilla7, main .zapatilla8, main .zapatilla9, main .zapatilla10, main .zapatilla11, main .zapatilla12, main .zapatilla13, main .zapatilla14, main .zapatilla15, main .zapatilla16 {
   background-color: #9D8D73;
@@ -61,31 +82,6 @@ main .imagenes-zapatillas {
   background-color: transparent;
   width: 13rem;
 }
-main .fila1, main .fila2, main .fila3, main .fila4, main .fila5 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-main .prod {
-  font-weight: 900;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-}
-main .titulo {
-  font-size: 1rem;
-  font-weight: bolder;
-  padding: 1rem;
-  text-align: left;
-}
-main .recomendado {
-  font-size: 1.5rem;
-  font-weight: bolder;
-  text-align: left;
-  padding: 1rem;
-}
 
 footer {
   background-color: #645949;
@@ -97,12 +93,20 @@ footer {
 footer .titulosfooter {
   font-size: larger;
   font-weight: bolder;
+  list-style: none;
 }
 
 .mapas {
   display: flex;
   justify-content: space-around;
   gap: 0.75rem;
+}
+@media screen and (max-width: 900px) {
+  .mapas {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
 }
 
 .tienda1 {
@@ -120,6 +124,12 @@ footer .titulosfooter {
 .vision-mission {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  .vision-mission {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 .vision, .mission {
@@ -142,15 +152,4 @@ footer .titulosfooter {
 
 .contactanos {
   font-weight: bolder;
-}
-
-@media (max-width: 900px) {
-  .fila1, .fila2, .fila3, .fila4, .fila5 {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .vision-mission {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
 }/*# sourceMappingURL=estilos.css.map */

@@ -7,10 +7,15 @@
     color: black;
     list-style: none;
     
+    
     &::selection{
 
         background-color: white;
     
     }
-    
+    & a {
+        list-style: none;
+        text-decoration: none;
+        color: black;
+    }
 }
